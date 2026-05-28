@@ -26,10 +26,10 @@ Bạn sẽ thấy output so sánh phản hồi của GPT-4o và GPT-4o-mini.
 Gọi `call_openai` với các giá trị temperature 0.0, 0.5, 1.0 và 1.5 sử dụng prompt **"Hãy kể cho tôi một sự thật thú vị về Việt Nam."**
 
 **Bạn nhận thấy quy luật gì qua bốn phản hồi?** (2–3 câu)
-> *Câu trả lời của bạn*
+> Khi temperature = 0.0, phản hồi thường rất ổn định, ngắn gọn và ít thay đổi giữa các lần gọi. Khi tăng lên 0.5 và 1.0, câu trả lời trở nên đa dạng, sáng tạo và tự nhiên hơn, còn 1.5 thì sẽ sáng tạo hơn nhưng sẽ dễ bị hallu
 
 **Bạn sẽ đặt temperature bao nhiêu cho chatbot hỗ trợ khách hàng, và tại sao?**
-> *Câu trả lời của bạn*
+> 0.0 -> 0.3 để đảm bảo câu trả lời nhất quán và ít sai lệch, để giữ chất lượng dịch vụ và ít gây nhầm lẫn cho khách hàng
 
 ---
 
@@ -37,16 +37,16 @@ Gọi `call_openai` với các giá trị temperature 0.0, 0.5, 1.0 và 1.5 sử
 Xem xét kịch bản: 10.000 người dùng hoạt động mỗi ngày, mỗi người thực hiện 3 lần gọi API, mỗi lần trung bình ~350 token.
 
 **Ước tính xem GPT-4o đắt hơn GPT-4o-mini bao nhiêu lần cho workload này:**
-> *Câu trả lời của bạn*
+> Xấp xỉ 33 lần, tổng token/ ngày sẽ là 10.500.00, ngày/cost của gpt-4o là 10.5 x 25$ = 262.50, còn mini là 10.5*0.75$ = 7.88$
 
 **Mô tả một trường hợp mà chi phí cao hơn của GPT-4o là xứng đáng, và một trường hợp GPT-4o-mini là lựa chọn tốt hơn:**
-> *Câu trả lời của bạn*
+> Khi tác vụ nặng suy luận sâu thì GPT-4o xứng đáng hơn, còn những task khối lượng lớn lặp đi lặp lại thì mini xứng đáng hơn
 
 ---
 
 ### Bài tập 2.3 — Trải Nghiệm Người Dùng với Streaming
 **Streaming quan trọng nhất trong trường hợp nào, và khi nào thì non-streaming lại phù hợp hơn?** (1 đoạn văn)
-> *Câu trả lời của bạn*
+> Quan trọng nhất khi trải nghiệm thời gian thực quan trọng như trợ lý chat hay coding assistant. Non streaming phù hợp cho các tác vụ batch, trả về kết quả ngắn
 
 
 ## Danh Sách Kiểm Tra Nộp Bài
